@@ -8,36 +8,36 @@
  *
  * Return: pointer of an array of chars 0
  */
-char *str_concat(char *ly1, char *ly2)
+char *str_concat(char *s1, char *s2)
 {
-	char *layla;
-	unsigned int d, p, f, limit;
+	char *liloo;
+	unsigned int d, p, k, limit;
 
-	if (ly1 == NULL)
-		ly1 = "";
-	if (ly2 == NULL)
-		ly2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	for (d = 0; ly1[d] != '\0'; d++)
+	for (d = 0; s1[d] != '\0'; d++)
 		;
 
-	for (p = 0; ly2[p] != '\0'; p++)
+	for (p = 0; s2[p] != '\0'; p++)
 		;
 
-	layla = malloc(sizeof(char) * (d + p + 1));
+	liloo = malloc(sizeof(char) * (d + p + 1));
 
-	if (layla == NULL)
+	if (liloo == NULL)
 	{
-		free(layla);
+		free(liloo);
 		return (NULL);
 	}
 
-	for (f = 0; f < d; f++)
-		layla[f] = ly1[f];
+	for (k = 0; k < d; k++)
+		liloo[k] = s1[k];
 
 	limit = p;
-	for (p = 0; p <= limit; f++, f++)
-		layla[f] = ly2[p];
+	for (p = 0; p <= limit; k++, p++)
+		liloo[k] = s2[p];
 
-	return (layla);
+	return (liloo);
 }
