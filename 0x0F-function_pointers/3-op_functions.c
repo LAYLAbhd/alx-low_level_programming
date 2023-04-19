@@ -2,8 +2,8 @@
 
 /**
  * op_add - adds two numbers.
- * @a: first number.
- * @b: second number.
+ * @a: is first number.
+ * @b: is second number.
  *
  * Return: add.
  */
